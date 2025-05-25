@@ -21,7 +21,7 @@ Aplikasi web sederhana berbasis Flask untuk mengunduh video YouTube, dirancang u
 
 1.  **Clone Repositori:**
     ```bash
-    git clone [URL_REPOSITORI_GIT_ANDA]
+    git clone https://github.com/jhopan/YoutubeDownloader.git
     cd yt-downloader-termux
     ```
 
