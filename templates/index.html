@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>YT Downloader (Pilih Format)</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; background-color: #f4f4f4; }
+        .container { background: #fff; padding: 20px; border-radius: 8px; max-width: 600px; margin: auto; }
+        h1 { text-align: center; color: #333; }
+        label { font-weight: bold; }
+        input[type="text"] { width: calc(100% - 22px); padding: 10px; margin: 5px 0 15px 0; border: 1px solid #ddd; border-radius: 4px; }
+        button { background: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; margin-bottom: 10px; }
+        button:hover { background: #0056b3; }
+        button:disabled { background: #cccccc; cursor: not-allowed; }
+        #status { margin-top: 20px; padding: 15px; border-radius: 4px; font-weight: bold; text-align: center; }
+        .status-info { background-color: #e7f3fe; color: #2196F3; }
+        .status-success { background-color: #dff0d8; color: #3c763d; }
+        .status-error { background-color: #f2dede; color: #a94442; }
+        .hidden { display: none; }
+        #formatsList { max-height: 200px; overflow-y: auto; border: 1px solid #eee; padding: 10px; margin-bottom: 15px; background-color: #f9f9f9; }
+        .format-item label { margin-left: 10px; font-weight: normal; }
+        .format-item { display: block; margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube Downloader (Pilih Format)</h1>
+
+        <form id="urlForm">
+            <label for="url">1. Masukkan URL YouTube:</label>
+            <input type="text" id="url" name="url" placeholder="https://www.youtube.com/watch?v=..." required>
+            <button type="button" id="getFormatsButton">Cari Pilihan Format</button>
+        </form>
+
+        <hr>
+
+        <div id="status">Masukkan URL dan klik 'Cari Pilihan Format'.</div>
+
+        <div id="formatsList">
+            </div>
+
+        <button type="button" id="downloadButton" class="hidden">2. Download Format Terpilih</button>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
